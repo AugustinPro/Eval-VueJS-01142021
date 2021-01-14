@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Vue.js#1 | Exercice 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-dark bg-primary mb-5">
+            <a class="navbar-brand" href="#">Tatooine Infos</a>
+        </nav>
+    </header>
+    <main id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <img src="assets/img/tatooine.jpg" class="card-img-top" :alt="tatooineInfos.name">
+                        <div class="card-body">
+                            <h5 class="card-title">{{tatooineInfos.name}}</h5>
+                            <p class="card-text">{{tatooineInfos.name}} est une planète {{tatooineInfos.type}} localisée dans la {{tatooineInfos.localisation}}. Elle possède {{tatooineInfos.satellites}} lunes et sa capitale est {{tatooineInfos.captital}}. C'est le monde natif des {{tatooineInfos.natives[0]}} et {{tatooineInfos.natives[1]}}</p>
+                            <ul>
+                                <li v-for="char in tatooineInfos.characters" >{{char}}</li>
+                            </ul>
+                            <bs-buttonlink></bs-buttonlink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="assets/scripts-exo2.js"></script>
+</body>
+
+</html>

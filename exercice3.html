@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Vue.js#1 | Exercice 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+    <main id="app">
+        <!-- Votre code ici -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Your Name</span>
+            </div>
+            <input v-on:keyup.enter="getApi()" v-model="fnameQuery" type="text" class="form-control" placeholder="Ex: John" aria-label="Username" aria-describedby="basic-addon1">
+            <!-- <p class="text-white">{{fnameQuery}}</p> -->
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Votre Nom : {{name}}</span>
+              <span class="input-group-text">Votre Age : {{age}}</span>
+              <span class="input-group-text">Nombre de personnes avec votre nom en France : {{count}}</span>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="assets/scripts-exo3.js"></script>
+</body>
+
+</html>
