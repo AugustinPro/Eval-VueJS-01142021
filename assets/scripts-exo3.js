@@ -7,7 +7,7 @@ var app = new Vue({
         count: ''
     },
     methods: {
-    getApi() {
+    getAgifyInfos() {
         console.log('test')
         let url = `https://api.agify.io?name=${this.fnameQuery}&country_id=FR`
         axios
@@ -20,6 +20,6 @@ var app = new Vue({
         }
     },
     mounted() {
-        this.getApi();
+        this.getAgifyInfos();
     }
 })
